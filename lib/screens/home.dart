@@ -33,23 +33,84 @@ class Home extends StatelessWidget {
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))),
       ),
-      body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "AppBar Tutorial",
-            style: TextStyle(fontSize: 30),
-          ),
-          Text(
-            "Code With Tea",
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.purple,
-                fontSize: 20),
-          )
-        ],
-      )),
+      body: Container(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: Image(
+                    image: NetworkImage(
+                        "https://www.unicef.org/pakistan/sites/unicef.org.pakistan/files/styles/hero_desktop/public/AZ_WASH_Punjab_132.JPG"),
+                    width: 150,
+                    // fit: BoxFit.cover,
+                  ),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: Image(
+                    image: NetworkImage(
+                        "https://www.unicef.org/pakistan/sites/unicef.org.pakistan/files/styles/hero_desktop/public/AZ_WASH_Punjab_132.JPG"),
+                    width: 150,
+                    // fit: BoxFit.cover,
+                  ),
+                ),
+                Expanded(
+                  child: Image(
+                    image: NetworkImage(
+                        "https://www.unicef.org/pakistan/sites/unicef.org.pakistan/files/styles/hero_desktop/public/AZ_WASH_Punjab_132.JPG"),
+                    width: 150,
+                    // fit: BoxFit.cover,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.star),
+                Icon(Icons.star),
+                Icon(Icons.star),
+                Icon(Icons.star_border),
+                Icon(Icons.star_border),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              // crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Icon(
+                      Icons.phone,
+                      size: 34.0,
+                    ),
+                    Text("Phone")
+                  ],
+                ),
+                Column(
+                  children: [
+                    Icon(
+                      Icons.alt_route,
+                      size: 34.0,
+                    ),
+                    Text("Phone")
+                  ],
+                ),
+                Column(
+                  children: [
+                    Icon(
+                      Icons.share,
+                      size: 34.0,
+                    ),
+                    Text("Phone")
+                  ],
+                )
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

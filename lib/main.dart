@@ -1,5 +1,6 @@
 import 'package:first_flutter_application/screens/dashboard.dart';
 import 'package:first_flutter_application/screens/home.dart';
+import 'package:first_flutter_application/screens/page_builder.dart';
 import 'package:first_flutter_application/screens/reading_page.dart';
 import 'package:first_flutter_application/screens/show_list.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.teal,
       ),
       debugShowCheckedModeBanner: false,
-      home: const ReadingPage(),
+      home: ListViewBuilder(),
     );
   }
 }

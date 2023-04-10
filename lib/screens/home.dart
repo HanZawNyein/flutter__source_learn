@@ -8,10 +8,10 @@ class Home extends StatelessWidget {
     return Scaffold(
       // extendBodyBehindAppBar: true,
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.menu),
-        ),
+        // leading: IconButton(
+        //   onPressed: () {},
+        //   icon: Icon(Icons.menu),
+        // ),
         title: Text("AppBar"),
         actions: [
           IconButton(
@@ -32,6 +32,71 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.purple, //.withOpacity(0.6),
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))),
+      ),
+      drawer: Drawer(
+        // elevation: 0,
+        child: ListView(
+          children: [
+            UserAccountsDrawerHeader(
+              currentAccountPicture: CircleAvatar(
+                foregroundImage: NetworkImage(
+                    'https://images.pexels.com/photos/1308885/pexels-photo-1308885.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
+              ),
+              accountEmail: Text("hanzawnyineonline@gmail.com"),
+              accountName: Text("Han Zaw Nyein"),
+              otherAccountsPictures: [
+                CircleAvatar(
+                  foregroundImage: NetworkImage(
+                      'https://images.pexels.com/photos/1308885/pexels-photo-1308885.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
+                ),
+                CircleAvatar(
+                  foregroundImage: NetworkImage(
+                      'https://images.pexels.com/photos/1308885/pexels-photo-1308885.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
+                ),
+                CircleAvatar(
+                  foregroundImage: NetworkImage(
+                      'https://images.pexels.com/photos/1308885/pexels-photo-1308885.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
+                ),
+              ],
+              // padding: EdgeInsets.all(0),
+              // child: Container(
+              //   color: Colors.teal,
+              //   child: Column(children: [
+              //     Text("Hi"),
+              //   ]),
+              // )
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("Home"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.shopping_cart),
+              title: Text("Shopping Cart"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.favorite),
+              title: Text("Favorite"),
+              onTap: () {},
+            ),
+            Padding(
+              padding: const EdgeInsets.all(14.0),
+              child: Text("Labels"),
+            ),
+            ListTile(
+              leading: Icon(Icons.label),
+              title: Text("Favorite"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.label),
+              title: Text("Favorite"),
+              onTap: () {},
+            ),
+          ],
+        ),
       ),
       body: Container(
         child: Column(

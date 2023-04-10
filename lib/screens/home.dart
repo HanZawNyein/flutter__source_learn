@@ -6,26 +6,50 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: ElevatedButton(
+      // extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        leading: IconButton(
           onPressed: () {},
-          style: ElevatedButton.styleFrom(
-              padding: const EdgeInsets.all(20.0),
-              fixedSize: const Size(300, 80),
-              textStyle:
-                  const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-              // backgroundColor: Colors.yellow,
-              foregroundColor: Colors.black87,
-              // elevation: 15,
-              shadowColor: Colors.yellow,
-              // side: BorderSide(color: Colors.black87, width: 1),
-              alignment: Alignment.center,
-              shape: const StadiumBorder()),
-          child: const Text("Let's Begin"),
-          // icon: Icon(Icons.add_shopping_cart),
-          // label: ,
+          icon: Icon(Icons.menu),
         ),
+        title: Text("AppBar"),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.shopping_cart),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.search),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.menu_book),
+          ),
+        ],
+        elevation: 0,
+        titleSpacing: 20.0,
+        backgroundColor: Colors.purple, //.withOpacity(0.6),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))),
       ),
+      body: Center(
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "AppBar Tutorial",
+            style: TextStyle(fontSize: 30),
+          ),
+          Text(
+            "Code With Tea",
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.purple,
+                fontSize: 20),
+          )
+        ],
+      )),
     );
   }
 }

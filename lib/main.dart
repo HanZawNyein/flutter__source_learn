@@ -1,3 +1,4 @@
+import 'package:first_flutter_application/screens/dashboard.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter',
+      // themeMode: ThemeMode.dark,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -22,39 +24,10 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.teal,
       ),
-      home: const Home(),
-    );
-  }
-}
-
-class Home extends StatefulWidget {
-  const Home({super.key});
-
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Dashboard".toUpperCase()),
-        backgroundColor: Colors.teal,
-      ),
-      body: const Center(
-          child: Text.rich(
-        TextSpan(text: "my", children: [
-          TextSpan(
-              text: 'Fluttter',
-              style: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold)),
-          TextSpan(
-              text: 'App',
-              style: TextStyle(fontSize: 20.0, color: Colors.teal)),
-        ]),
-      )),
+      debugShowCheckedModeBanner: false,
+      home: const Dashboard(),
     );
   }
 }
